@@ -13,6 +13,6 @@ public class Staff extends Employee
 	
 	public String tostring() 
 	{
-		return(super.toString() + " " + jobtitle);
+		return(super.toString() + " and works in the " + jobtitle);
 	}
 }
