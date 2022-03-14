@@ -12,6 +12,6 @@ public  class Faculty extends Employee {
 	
 	public String toString() 
 	{
-		return(departmentname);
+		return(super.toString() + " and works in the deparment " + departmentname);
 	}
 }

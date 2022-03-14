@@ -1,7 +1,10 @@
 package UEmployee;
 
-public class Staff extends Employee {
+public class Staff extends Employee 
+{
+	
 	String jobtitle;
+	
 	public Staff(String fName, String lName, String title,double salary) 
 	{
 		super(fName,lName,salary);
@@ -10,6 +13,6 @@ public class Staff extends Employee {
 	
 	public String tostring() 
 	{
-		return(super.toString() + jobtitle);
+		return(super.toString() + " " + jobtitle);
 	}
 }
