@@ -27,10 +27,12 @@ public class University {
 			return (new Faculty(fName, lName, salary, dname));
 				
 		}
-		else {
+		
+		else
+		{
 			System.out.println("What is your job title: ");
 			String title = input.next();
-			return (new Staff(fName, lName, title, salary));
+			return (new Staff(fName, lName, salary, title));
 		}
 	}
 	
