@@ -2,6 +2,8 @@ package Account;
 
 import java.util.Scanner;
 
+import UEmployee.Employee;
+
 public class CliantCode {
 	
 	public static Customer createcustomer()
@@ -19,13 +21,23 @@ public class CliantCode {
 		
 		if (position.equalsIgnoreCase("P"))
 		{
-			
+			return (new PersonalAccount(fName, lName));
 		}
 		
 		else 
 		{
-			
+			return (new BusinessAccount(fName, lName));
 		}
+		
+	}
+	
+	public static void main (String[] args)
+	{
+		Customer eX1;
+		
+		eX1 = createcustomer();
+		System.out.print(eX1);
+
 		
 	}
 }
