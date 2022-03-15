@@ -8,5 +8,10 @@ public class BusinessAccount extends Customer{
 	{
 		super(fName,lName);
 	}
+	
+	public String toString()
+	{
+		return(super.toString());
+	}
 
 }

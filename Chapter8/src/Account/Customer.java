@@ -9,4 +9,10 @@ public class Customer
         firstName = fName;
         lastName = lName;
     }
+   
+    public String toString()
+    {
+        return(firstName+" "+ lastName);
+    }
+    
 }

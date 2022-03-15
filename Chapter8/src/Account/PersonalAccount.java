@@ -8,6 +8,11 @@ public class PersonalAccount extends Customer{
 	{
 		super(fName,lName);
 	}
+	
+	public String toString()
+	{
+		return(super.toString());
+	}
 
 }
 
