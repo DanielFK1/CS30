@@ -2,7 +2,7 @@ package Account;
 
 import java.util.Scanner;
 
-import UEmployee.Employee;
+import Account.Customer;
 
 public class CliantCode {
 	
@@ -21,12 +21,16 @@ public class CliantCode {
 		
 		if (position.equalsIgnoreCase("P"))
 		{
-			return (new PersonalAccount(fName, lName));
+			System.out.println("What is your balance? ");
+			double balance = input.next();
+			return (new PersonalAccount(fName, lName, balance));
 		}
 		
 		else 
 		{
-			return (new BusinessAccount(fName, lName));
+			System.out.println("What is your balance? ");
+			double balance = input.next();
+			return (new BusinessAccount(fName, lName, balance));
 		}
 		
 	}
