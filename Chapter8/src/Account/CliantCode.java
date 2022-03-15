@@ -21,15 +21,15 @@ public class CliantCode {
 		
 		if (position.equalsIgnoreCase("P"))
 		{
-			System.out.println("What is your balance? ");
-			double balance = input.next();
+			System.out.println("What is your balance: ");
+			int balance = input.next();
 			return (new PersonalAccount(fName, lName, balance));
 		}
 		
 		else 
 		{
-			System.out.println("What is your balance? ");
-			double balance = input.next();
+			System.out.println("What is your balance: ");
+			int balance = input.next();
 			return (new BusinessAccount(fName, lName, balance));
 		}
 		
