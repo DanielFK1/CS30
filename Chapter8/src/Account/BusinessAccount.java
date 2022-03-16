@@ -13,7 +13,7 @@ public class BusinessAccount extends Customer{
 	
 	public String toString()
 	{
-		return(super.toString() + balance);
+		return(super.toString() + " " + balance);
 	}
 
 }
