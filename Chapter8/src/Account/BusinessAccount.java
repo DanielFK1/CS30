@@ -12,7 +12,7 @@ public class BusinessAccount extends Customer{
 		
 		if (balance < 500) 
 		{
-			
+			System.out.println("We will add 100");
 		}
 	}
 	
