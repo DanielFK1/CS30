@@ -9,6 +9,11 @@ public class BusinessAccount extends Customer{
 	{
 		super(fName,lName);
 		balance = bal;
+		
+		if (balance < 500) 
+		{
+			
+		}
 	}
 	
 	public String toString()
