@@ -6,7 +6,7 @@ import Account.Customer;
 
 public class CliantCode {
 	
-	public static Customer createcustomer()
+	public static Account createcustomer()
 	{
 		Scanner input = new Scanner(System.in);
 		
@@ -37,7 +37,7 @@ public class CliantCode {
 	
 	public static void main (String[] args)
 	{
-		Customer eX1;
+		Account eX1;
 		
 		eX1 = createcustomer();
 		System.out.print(eX1);
