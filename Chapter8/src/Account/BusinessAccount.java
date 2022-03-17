@@ -12,13 +12,14 @@ public class BusinessAccount extends Customer{
 		
 		if (balance < 500) 
 		{
-			System.out.println("We will add 100");
+			System.out.println("$10 will be charged");
+			balance = (balance - 10);
 		}
 	}
 	
 	public String toString()
 	{
-		return(super.toString() + " " + balance);
+		return(super.toString() + " your balance is $" + balance);
 	}
 
 }

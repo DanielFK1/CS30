@@ -9,11 +9,17 @@ public class PersonalAccount extends Customer{
 	{
 		super(fName,lName);
 		balance = bal;
+		
+		if (balance < 100)
+		{
+			System.out.println("Two dollars will be charged");
+			balance = (balance - 2);
+		}
 	}
 	
 	public String toString()
 	{
-		return(super.toString() + " " + balance);
+		return(super.toString() + " your balance is now $" + balance);
 	}
 
 }
