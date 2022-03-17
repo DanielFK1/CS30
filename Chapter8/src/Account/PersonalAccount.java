@@ -1,13 +1,10 @@
 package Account;
 
-public class PersonalAccount extends Customer{
-	
-	String Personal;
-	double balance;
+public class PersonalAccount extends Account{
 	
 	public PersonalAccount(String fName, String lName, double bal) 
 	{
-		super(fName,lName);
+		super(fName,lName,bal);
 		balance = bal;
 		
 		if (balance < 100)
@@ -16,6 +13,14 @@ public class PersonalAccount extends Customer{
 			balance = (balance - 2);
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public String toString()
 	{

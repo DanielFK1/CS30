@@ -23,14 +23,14 @@ public class CliantCode {
 		{
 			System.out.println("What is your balance: ");
 			int balance = input.nextInt();
-			return (new PersonalAccount(fName, lName, balance));
+			return (new Account(fName, lName, balance));
 		}
 		
 		else 
 		{
 			System.out.println("What is your balance: ");
 			int balance = input.nextInt();
-			return (new BusinessAccount(fName, lName, balance));
+			return (new Account(fName, lName, balance));
 		}
 		
 	}
