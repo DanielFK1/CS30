@@ -3,14 +3,14 @@ package Account;
 public class BusinessAccount extends Account{
 	
 	
-	public BusinessAccount(String fName, String lName, double bal) 
+	public BusinessAccount(String fName, String lName,double bal, double depo) 
 	{
-		super(fName,lName, bal);
+		super(fName,lName, bal, depo);
 		
-		if (balance < 500) 
+		if (deposit < 500) 
 		{
 			System.out.println("$10 will be charged");
-			balance = (balance - 10);
+			deposit = (deposit - 10);
 			
 		}
 	}
@@ -26,7 +26,7 @@ public class BusinessAccount extends Account{
 	
 	public String toString()
 	{
-		return(super.toString() + " your balance is $" + balance);
+		return(super.toString() + " your balance is $" + deposit);
 	}
 
 }

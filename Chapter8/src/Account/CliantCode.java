@@ -16,22 +16,25 @@ public class CliantCode {
 		System.out.println("Enter last name: ");
 		String lName = input.next();
 		
-		System.out.println("Do you want to open you Personal or Business Account(P or B): ");
-		String position = input.next();
+		System.out.println("How much do you have in your account: ");
+		int balance = input.nextInt();
 		
-		if (position.equalsIgnoreCase("P"))
+		System.out.println("How much do you want to deposit: ");
+		int deposit = input.nextInt();
+		
+		//if (position.equalsIgnoreCase("P"))
 		{
-			System.out.println("What is your balance: ");
-			int balance = input.nextInt();
-			return (new Account(fName, lName, balance));
+			//System.out.println("What is your balance: ");
+			//int deposit = input.nextInt();
+			return (new Account(fName, lName, balance, deposit));
 		}
 		
-		else 
-		{
-			System.out.println("What is your balance: ");
-			int balance = input.nextInt();
-			return (new Account(fName, lName, balance));
-		}
+		//else 
+		
+			//System.out.println("What is your balance: ");
+			//int deposit = input.nextInt();
+			//return (new Account(fName, lName, deposit));
+		
 		
 	}
 	

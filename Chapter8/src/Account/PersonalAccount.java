@@ -2,15 +2,15 @@ package Account;
 
 public class PersonalAccount extends Account{
 	
-	public PersonalAccount(String fName, String lName, double bal) 
+	public PersonalAccount(String fName, String lName, double bal, double depo) 
 	{
-		super(fName,lName,bal);
-		balance = bal;
+		super(fName,lName, bal, depo);
+		deposit = depo;
 		
-		if (balance < 100)
+		if (deposit < 100)
 		{
 			System.out.println("Two dollars will be charged");
-			balance = (balance - 2);
+			deposit = (deposit - 2);
 		}
 	}
 	
@@ -24,7 +24,7 @@ public class PersonalAccount extends Account{
 	
 	public String toString()
 	{
-		return(super.toString() + " your balance is now $" + balance);
+		return(super.toString() + " your balance is now $" + deposit);
 	}
 
 }
