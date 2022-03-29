@@ -2,9 +2,8 @@ package Account;
 
 
 
-public class Account {
-	
-	//private class Customer
+public class Account 
+{
 	
 	private String firstName, lastName;
 	double deposit;

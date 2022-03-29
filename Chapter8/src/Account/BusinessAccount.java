@@ -13,7 +13,8 @@ public class BusinessAccount extends Account{
 		
 		if (balance < 500) 
 		{
-			System.out.println("$10 will be charged");		
+			System.out.println("$10 will be charged");	
+			balance = (balance - 2);
 		}
 		
 	}
