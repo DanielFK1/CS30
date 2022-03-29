@@ -30,7 +30,7 @@ public class BusinessAccount extends Account{
 	
 	public String toString()
 	{
-		return(super.toString() + " your balance is $" + deposit);
+		return(super.toString() + " your balance is $" + balance);
 	}
 
 }
