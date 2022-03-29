@@ -20,6 +20,7 @@ public class Account {
 		withdraw = with;
 		
 		balance = (balance + deposit);
+		balance = (balance - withdraw);
 		
 	}
 	
