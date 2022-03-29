@@ -24,7 +24,7 @@ public class Account
 	
     public String toString()
     {
-        return(firstName+" "+ lastName + " you deposited $" + deposit + 
-        		" now your balance is $" + balance);
+        return(firstName+" "+ lastName + " you deposited $" + deposit 
+        		+ " and withdrew $" + withdraw + " now your balance is $" + balance);
     }
 }
