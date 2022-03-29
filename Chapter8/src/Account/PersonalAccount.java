@@ -8,10 +8,12 @@ public class PersonalAccount extends Account{
 		deposit = depo;
 		withdraw = with;
 		
-		if (deposit < 100)
+		
+		
+		if (balance < 100)
 		{
 			System.out.println("Two dollars will be charged");
-			deposit = (deposit - 2);
+			balance = (balance - 3);
 		}
 	}
 	

@@ -9,10 +9,12 @@ public class BusinessAccount extends Account{
 		deposit = depo;
 		withdraw = with;
 		
-		if (deposit < 500) 
+		
+		
+		if (balance < 500) 
 		{
 			System.out.println("$10 will be charged");
-			deposit = (deposit - 10);
+			balance = (balance - 10);
 			
 		}
 	}
