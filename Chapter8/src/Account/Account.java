@@ -18,13 +18,13 @@ public class Account {
 		balance = bal;
 		deposit = depo;
 		withdraw = with;
-		balance = (balance + deposit);
+		balance = (balance + deposit - withdraw);
+		
 		
 	}
 	
     public String toString()
     {
-		balance = (balance - withdraw);
         return(firstName+" "+ lastName + " you deposited $" + deposit + 
         		" now your balance is $" + balance);
     }
