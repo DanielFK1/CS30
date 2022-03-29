@@ -3,9 +3,11 @@ package Account;
 public class BusinessAccount extends Account{
 	
 	
-	public BusinessAccount(String fName, String lName,double bal, double depo) 
+	public BusinessAccount(String fName, String lName,double bal, double depo,double with) 
 	{
-		super(fName,lName, bal, depo);
+		super(fName,lName, bal, depo,with);
+		deposit = depo;
+		withdraw = with;
 		
 		if (deposit < 500) 
 		{

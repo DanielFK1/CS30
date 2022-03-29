@@ -27,14 +27,17 @@ public class CliantCode {
 		
 		if (position.equalsIgnoreCase("P"))
 		{
-			System.out.println("What is your balance: ");
+			System.out.println("How much do you want to withdraw: ");
+			int withdraw = input.nextInt();
+			return (new Account(fName, lName, balance, deposit,withdraw));
+			
+			
 		}
 		
 		else 
-			System.out.println("What is your balance: ");
-			//return (new Account(fName, lName, deposit));
-		
-		return (new Account(fName, lName, balance, deposit));
+			System.out.println("How much do you want to withdraw: ");
+			int withdraw = input.nextInt();
+			return (new Account(fName, lName, balance, deposit,withdraw));
 		
 	
 		
