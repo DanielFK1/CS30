@@ -20,21 +20,10 @@ public class BusinessAccount extends Account{
 	
 	
 	
-	//p
-	
-	
-	
-	
-	
 	
 	public String toString()
 	{
-		if (balance < 500) 
-		{
-			System.out.println("$10 will be charged");
-			balance = (balance - 10);
-			
-		}
+
 		return(super.toString() + " your balance is $" + balance);
 	}
 

@@ -18,13 +18,7 @@ public class PersonalAccount extends Account{
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
+
 	public String toString()
 	{
 		return(super.toString() + " your balance is now $" + balance);
