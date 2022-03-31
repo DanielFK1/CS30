@@ -16,6 +16,17 @@ public class CliantCode {
 		System.out.println("Enter last name: ");
 		String lName = input.next();
 		
+		System.out.println("What is your address: ");
+		String add = input.nextLine();
+		 
+		input.next();
+		
+		System.out.println("Which city do you live in: ");
+		String cy = input.next();
+		
+		System.out.println("Which province do you live in: ");
+		String pvince = input.next();
+		
 		System.out.println("How much do you have in your account: ");
 		int balance = input.nextInt();
 		
@@ -30,8 +41,6 @@ public class CliantCode {
 			System.out.println("How much do you want to withdraw: ");
 			int withdraw = input.nextInt();
 			return (new Account(fName, lName, balance, deposit,withdraw));
-			
-			
 		}
 		
 		else 
