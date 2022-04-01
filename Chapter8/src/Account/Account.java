@@ -10,13 +10,13 @@ public class Account
 	double balance;
 	double withdraw;
 	
-	public Account(String fName, String lName, double bal, double depo, double with) 
+	public Account(String fName, String lName,String add, String cy, String pvince, double bal) 
 	{
 		firstName = fName;
 		lastName = lName;
 		balance = bal;
-		deposit = depo;
-		withdraw = with;
+		//deposit = depo;
+		//withdraw = with;
 		balance = (balance + deposit - withdraw);
 		
 		
@@ -24,7 +24,8 @@ public class Account
 	
     public String toString()
     {
-        return(firstName+" "+ lastName + " you deposited $" + deposit 
-        		+ " and withdrew $" + withdraw + " now your balance is $" + balance);
+    	return(firstName+" "+ lastName + " lives on " + address + " " + city + "," + province );
+        /*return(firstName+" "+ lastName + " you deposited $" + deposit 
+        		+ " and withdrew $" + withdraw + " now your balance is $" + balance); */
     }
 }

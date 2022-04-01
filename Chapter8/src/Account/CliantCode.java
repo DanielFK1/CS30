@@ -6,7 +6,7 @@ import Account.Customer;
 
 public class CliantCode {
 	
-	public static Account createcustomer()
+	/*public static Account createcustomer()
 	{
 		Scanner input = new Scanner(System.in);
 		
@@ -48,13 +48,44 @@ public class CliantCode {
 			int withdraw = input.nextInt();
 			return (new Account(fName, lName, balance, deposit,withdraw));
 	}
+	*/
 	
 	public static void main (String[] args)
 	{
-		Account eX1;
+
+		Scanner input = new Scanner(System.in);
 		
-		eX1 = createcustomer();
-		System.out.print(eX1);
+		
+		System.out.println("Enter first name: ");
+		String fName = input.next();
+		
+		System.out.println("Enter last name: ");
+		String lName = input.next();
+		
+		System.out.println("What is your address: ");
+		String add = input.nextLine();
+		 
+		input.nextLine();
+		
+		System.out.println("Which city do you live in: ");
+		String cy = input.next();
+		
+		System.out.println("Which province do you live in: ");
+		String pvince = input.next();
+		
+		System.out.println("How much do you have in your account: ");
+		int balance = input.nextInt();
+		
+		
+
+		PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance);
+		
+		System.out.println(pct);
+		
+		
+		/*System.out.println("How much do you want to deposit: ");
+		int deposit = input.nextInt();
+		*/
 
 		
 	}

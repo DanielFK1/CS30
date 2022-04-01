@@ -2,12 +2,12 @@ package Account;
 
 public class PersonalAccount extends Account{
 	
-	public PersonalAccount(String fName, String lName, double bal, double depo,double with) 
+	public PersonalAccount(String fName, String lName,String add, String cy, String pvince,double bal) 
 	{
-		super(fName,lName, bal, depo,with);
+		super(fName,lName,add,cy,pvince, bal);
 		balance = bal;
-		deposit = depo;
-		withdraw = with;
+		//deposit = depo;
+		//withdraw = with;
 		
 		
 		
