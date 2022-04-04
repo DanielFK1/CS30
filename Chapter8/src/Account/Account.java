@@ -16,12 +16,11 @@ public class Account
 		balance = bal;
 		deposit = depo;
 		
-		balance = (balance + deposit);
-		
 	}
 	
     public String toString()
     {
+    	balance = (balance + deposit);
     	return("You deposited $" + deposit + " into your account," + " your balance is now $" + balance);
     }
 }
