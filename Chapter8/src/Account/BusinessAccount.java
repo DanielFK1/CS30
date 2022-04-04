@@ -5,7 +5,7 @@ public class BusinessAccount extends Account{
 	
 	public BusinessAccount(String fName, String lName,String add, String cy, String pvince, double bal) 
 	{
-		super(fName,lName,add,cy,pvince, bal);
+		super(fName,lName,add,cy,pvince, bal, depo);
 		balance = bal;
 		//deposit = depo;
 		//withdraw = with;

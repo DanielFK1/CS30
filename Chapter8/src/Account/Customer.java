@@ -18,7 +18,7 @@ public class Customer
    
     public String toString()
     {
-        return(firstName+" "+ lastName + " lives on " + address + " " + city + "," + province );
+        return(firstName+ " " + lastName + " lives at " + address + " in " + city + "," + province);
     }
     
 }

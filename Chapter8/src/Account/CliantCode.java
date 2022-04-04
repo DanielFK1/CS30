@@ -76,16 +76,12 @@ public class CliantCode {
 		System.out.println("How much do you have in your account: ");
 		int balance = input.nextInt();
 		
-		
+		System.out.println("How much do you want to deposit: ");
+		int deposit = input.nextInt();
 
-		PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance);
+		PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance,deposit);
 		
 		System.out.println(pct);
-		
-		
-		/*System.out.println("How much do you want to deposit: ");
-		int deposit = input.nextInt();
-		*/
 
 		
 	}
