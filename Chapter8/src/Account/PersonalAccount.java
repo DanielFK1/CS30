@@ -12,11 +12,11 @@ public class PersonalAccount extends Account{
 		
 		
 		
-		if (balance < 100)
-		{
-			System.out.println("Two dollars will be charged");
-			balance = (balance - 2);
-		}
+		//if (balance < 100)
+		//{
+			//System.out.println("Two dollars will be charged");
+			//balance = (balance - 2);
+		//}
 	}
 	
 	
