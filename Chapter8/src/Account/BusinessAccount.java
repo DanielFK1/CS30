@@ -11,11 +11,10 @@ public class BusinessAccount extends Account{
 		withdraw = with;
 		
 		
-		//if (balance < 500) 
-		//{
-			//System.out.println("$10 will be charged");	
-			//balance = (balance - 2);
-		//}
+		if (balance < 500) 
+		{	
+			balance = (balance - 10);
+		}
 		
 	}
 	
@@ -26,10 +25,9 @@ public class BusinessAccount extends Account{
 	{
 		if (balance < 500)
 		{
-			System.out.println("Two dollars will be charged");
 			balance = (balance - 10);
 			return("You deposited $" + deposit + " into your account and withdrew $" + withdraw 
-					+ " Due to the fact that your balance is below $500 "
+					+ ". Due to the fact that your balance is below $500 "
 					+ "we have deducted $10 your balance is now $" + balance);
 		}
 
