@@ -2,15 +2,13 @@ package Account;
 
 public class BusinessAccount extends Account{
 	
+	double withdraw;
 	
-	public BusinessAccount(String fName, String lName,String add, String cy, String pvince, double bal) 
+	public BusinessAccount(String fName, String lName,String add, String cy, String pvince,double bal,double depo,double with)
 	{
-		super(fName,lName,add,cy,pvince, bal, depo);
+		super(fName,lName,add,cy,pvince, bal, depo,with);
 		balance = bal;
-		//deposit = depo;
-		//withdraw = with;
-		
-		balance = (balance - withdraw);
+		withdraw = with;
 		
 		
 		if (balance < 500) 
@@ -26,8 +24,15 @@ public class BusinessAccount extends Account{
 	
 	public String toString()
 	{
+		if (balance < 500)
+		{
+			System.out.println("Two dollars will be charged");
+			balance = (balance - 10);
+			return(super.toString() + " Due to the fact that your balance is below $500 "
+					+ "we have deducted $10 your balance is now $" + balance);
+		}
 
-		return(super.toString() + " your balance is $" + balance);
+		return(super.toString());
 	}
 
 }

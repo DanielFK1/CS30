@@ -79,10 +79,25 @@ public class CliantCode {
 		System.out.println("How much do you want to deposit: ");
 		int deposit = input.nextInt();
 
-		PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance,deposit);
+		System.out.println("Which account will you like to go to Business or Personal(B or P): ");
+		String account = input.next();
 		
-		System.out.println(pct);
-
+		if (account.equalsIgnoreCase("B"))
+		{
+			System.out.println("How much do you want to withdraw: ");
+			int withdraw = input.nextInt();
+			BusinessAccount bct = new BusinessAccount(fName,lName,add,cy,pvince,balance,deposit,withdraw);
+			System.out.println(bct);
+		}
+		
+		if (account.equalsIgnoreCase("P")) 
+		{
+			System.out.println("How much do you want to withdraw: ");
+			int withdraw = input.nextInt();
+			PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance,deposit,withdraw);
+			System.out.println(pct);
+			
+		}
 		
 	}
 }
