@@ -18,7 +18,12 @@ public class Customer
    
     public String toString()
     {
-        return(firstName+ " " + lastName + " lives at " + address + " in " + city + "," + province);
+    	String cString;
+    	
+    	cString = firstName + " " + lastName + "\n";
+    	cString += address + "\n";
+    	cString += city + " " + province + "\n";
+    	return(cString);
     }
     
 }

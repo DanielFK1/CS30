@@ -1,12 +1,10 @@
 package Account;
 
-
+import java.text.NumberFormat;
 
 public class Account 
 {
 	double balance;
-	double deposit;
-	double withdraw;
 	
 	private Customer c;
 	
@@ -15,14 +13,35 @@ public class Account
 		c = new Customer(fName, lName, add, cy, pvince);
 		
 		balance = bal;
-		deposit = depo;
-		withdraw = with;
-		
 	}
 	
+    public double getBalance() 
+    {
+    	return(balance);
+    }
+    
+    public void deposit(double amt)
+    {
+    	balance += amt;
+    }
+    
+    public void withDraw(double amt)
+    {
+    	if (amt <= balance) 
+    	{
+    		balance -= amt;
+    	}
+    	else {
+    		System.out.println("Not enough money in account");
+    	}
+    }
+    
     public String toString()
     {
-    	balance = (balance + deposit - withdraw);
-    	return("You deposited $" + deposit + " into your account and withdrew $" + withdraw + ", your balance is now $" + balance);
+    	String accountString;
+    	NumberFormat money = NumberFormat.getCurrencyInstance();
+    	accountString = c.toString();
+    	accountString += "Current balance is " + money.format(balance);
+    	return(accountString);
     }
 }

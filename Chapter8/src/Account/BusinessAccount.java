@@ -11,10 +11,10 @@ public class BusinessAccount extends Account{
 		withdraw = with;
 		
 		
-		if (balance < 500) 
+		/*if (balance < 500) 
 		{	
 			balance = (balance - 10);
-		}
+		} */
 		
 	}
 	

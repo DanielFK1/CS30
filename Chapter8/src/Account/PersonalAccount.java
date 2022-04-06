@@ -8,15 +8,7 @@ public class PersonalAccount extends Account{
 	{
 		super(fName,lName,add,cy,pvince, bal,depo,with);
 		balance = bal;
-		withdraw = with;
-		
-		
-		
-		//if (balance < 100)
-		//{
-			//System.out.println("Two dollars will be charged");
-			//balance = (balance - 2);
-		//}
+		withdraw = with; 
 	}
 	
 	
