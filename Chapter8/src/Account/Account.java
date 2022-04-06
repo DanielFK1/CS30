@@ -8,7 +8,7 @@ public class Account
 	
 	private Customer c;
 	
-	public Account(String fName, String lName,String add, String cy, String pvince, double bal, double depo,double with) 
+	public Account(String fName, String lName,String add, String cy, String pvince, double bal) 
 	{		
 		c = new Customer(fName, lName, add, cy, pvince);
 		

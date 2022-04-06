@@ -42,7 +42,8 @@ public class CliantCode {
 		{
 			System.out.println("How much do you want to withdraw: ");
 			int withdraw = input.nextInt();
-			BusinessAccount bct = new BusinessAccount(fName,lName,add,cy,pvince,balance,deposit,withdraw);
+			BusinessAccount bct = new BusinessAccount(fName,lName,add,cy,pvince,balance);
+			
 			System.out.println(bct);
 		}
 		
@@ -50,7 +51,8 @@ public class CliantCode {
 		{
 			System.out.println("How much do you want to withdraw: ");
 			int withdraw = input.nextInt();
-			PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance,deposit,withdraw);
+			PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance);
+			pct.withDraw(withdraw);
 			System.out.println(pct);
 			
 		}

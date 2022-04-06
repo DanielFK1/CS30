@@ -2,13 +2,13 @@ package Account;
 
 public class PersonalAccount extends Account{
 	
-	double withdraw;
 	
-	public PersonalAccount(String fName, String lName,String add, String cy, String pvince,double bal,double depo,double with) 
+	
+	public PersonalAccount(String fName, String lName,String add, String cy, String pvince,double bal) 
 	{
-		super(fName,lName,add,cy,pvince, bal,depo,with);
+		super(fName,lName,add,cy,pvince, bal);
 		balance = bal;
-		withdraw = with; 
+		//withdraw = with; 
 	}
 	
 	
@@ -19,7 +19,7 @@ public class PersonalAccount extends Account{
 		{
 			System.out.println("Two dollars will be charged");
 			balance = (balance - 2);
-			return("You deposited $" + " into your account and withdrew $" + withdraw 
+			return("You deposited $" + " into your account and withdrew $"
 					+ " Due to the fact that your balance is below $100 "
 					+ "we have deducted $2 your balance is now $" + balance);
 		}
