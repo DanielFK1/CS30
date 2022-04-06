@@ -26,7 +26,7 @@ public class BusinessAccount extends Account{
 		if (balance < 500)
 		{
 			balance = (balance - 10);
-			return("You deposited $" + deposit + " into your account and withdrew $" + withdraw 
+			return("You deposited $" + " into your account and withdrew $" + withdraw 
 					+ ". Due to the fact that your balance is below $500 "
 					+ "we have deducted $10 your balance is now $" + balance);
 		}

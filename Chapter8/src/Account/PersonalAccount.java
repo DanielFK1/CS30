@@ -19,7 +19,7 @@ public class PersonalAccount extends Account{
 		{
 			System.out.println("Two dollars will be charged");
 			balance = (balance - 2);
-			return("You deposited $" + deposit + " into your account and withdrew $" + withdraw 
+			return("You deposited $" + " into your account and withdrew $" + withdraw 
 					+ " Due to the fact that your balance is below $100 "
 					+ "we have deducted $2 your balance is now $" + balance);
 		}

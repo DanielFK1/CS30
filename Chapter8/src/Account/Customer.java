@@ -20,9 +20,10 @@ public class Customer
     {
     	String cString;
     	
+    	
     	cString = firstName + " " + lastName + "\n";
     	cString += address + "\n";
-    	cString += city + " " + province + "\n";
+    	cString += city + "," + province + "\n";
     	return(cString);
     }
     
