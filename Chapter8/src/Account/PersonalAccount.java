@@ -2,28 +2,30 @@ package Account;
 
 public class PersonalAccount extends Account{
 	
-	
-	
 	public PersonalAccount(String fName, String lName,String add, String cy, String pvince,double bal) 
 	{
-		super(fName,lName,add,cy,pvince, bal);
-		balance = bal;
-		//withdraw = with; 
+		super(fName,lName,add,cy,pvince, bal); 
 	}
 	
 	
 
-	public String toString()
+	public String towithDraw(double amt)
 	{
-		if (balance < 100)
+		if (amt < super.getBalance())
 		{
-			System.out.println("Two dollars will be charged");
-			balance = (balance - 2);
-			return("You deposited $" + " into your account and withdrew $"
-					+ " Due to the fact that your balance is below $100 "
-					+ "we have deducted $2 your balance is now $" + balance);
+			super.withDraw(amt);
+			
+			if(super.getBalance() < 100) 
+			{
+				super.withDraw(2);
+				return(super.toString() + "There has been a charge of 2 dollars");
+			}
+			else
+			{
+				System.out.println("You don't have enoguh money in the account");
+			}
+			
 		}
-		
 		return(super.toString());
 	}
 

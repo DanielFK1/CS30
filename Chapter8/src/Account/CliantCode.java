@@ -18,10 +18,10 @@ public class CliantCode {
 		System.out.println("Enter last name: ");
 		String lName = input.next();
 		
-		System.out.println("What is your address: ");
-		String add = input.nextLine();
+		System.out.println("What is your zip: ");
+		String add = input.next();
 		 
-		input.nextLine();
+		//input.nextLine();
 		
 		System.out.println("Which city do you live in: ");
 		String cy = input.next();
@@ -31,9 +31,6 @@ public class CliantCode {
 		
 		System.out.println("How much do you have in your account: ");
 		int balance = input.nextInt();
-		
-		System.out.println("How much do you want to deposit: ");
-		int deposit = input.nextInt();
 
 		System.out.println("Which account will you like to go to Business or Personal(B or P): ");
 		String account = input.next();
@@ -43,7 +40,7 @@ public class CliantCode {
 			System.out.println("How much do you want to withdraw: ");
 			int withdraw = input.nextInt();
 			BusinessAccount bct = new BusinessAccount(fName,lName,add,cy,pvince,balance);
-			
+			bct.withDraw(withdraw);
 			System.out.println(bct);
 		}
 		
@@ -54,7 +51,7 @@ public class CliantCode {
 			PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance);
 			pct.withDraw(withdraw);
 			System.out.println(pct);
-			
+			//System.out.println(pct.getBalance());
 		}
 		
 	}

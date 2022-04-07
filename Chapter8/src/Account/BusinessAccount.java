@@ -8,29 +8,25 @@ public class BusinessAccount extends Account{
 	{
 		super(fName,lName,add,cy,pvince, bal);
 		balance = bal;
-		//withdraw = with;
-		
-		
-		/*if (balance < 500) 
-		{	
-			balance = (balance - 10);
-		} */
-		
 	}
 	
-	
-	
-	
-	public String toString()
+	public String towithDraw(double amt)
 	{
-		if (balance < 500)
+		if (amt < super.getBalance() - 10)
 		{
-			balance = (balance - 10);
-			return("You deposited $" + " into your account and withdrew $"
-					+ ". Due to the fact that your balance is below $500 "
-					+ "we have deducted $10 your balance is now $" + balance);
+			super.withDraw(amt);
+			
+			if(super.getBalance() < 500) 
+			{
+				super.withDraw(10);
+				return(super.toString() + "There has been a charge of 2 dollars");
+			}
+			else
+			{
+				System.out.println("You don't have enoguh money in the account");
+			}
 		}
-
+		
 		return(super.toString());
 	}
 
