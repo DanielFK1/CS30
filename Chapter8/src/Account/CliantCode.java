@@ -20,8 +20,6 @@ public class CliantCode {
 		
 		System.out.println("What is your zip: ");
 		String add = input.next();
-		 
-		//input.nextLine();
 		
 		System.out.println("Which city do you live in: ");
 		String cy = input.next();
