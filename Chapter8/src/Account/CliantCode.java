@@ -49,7 +49,7 @@ public class CliantCode {
 			PersonalAccount pct = new PersonalAccount(fName,lName,add,cy,pvince,balance);
 			pct.withDraw(withdraw);
 			System.out.println(pct);
-			//System.out.println(pct.getBalance());
+
 		}
 		
 	}
