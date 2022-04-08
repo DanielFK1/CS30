@@ -10,7 +10,7 @@ public class BusinessAccount extends Account{
 		balance = bal;
 	}
 	
-	public void towithDraw(double amt)
+	public void withDraw(double amt)
 	{
 		if (amt < super.getBalance() - 10)
 		{
@@ -19,11 +19,11 @@ public class BusinessAccount extends Account{
 			if(super.getBalance() < 500) 
 			{
 				super.withDraw(10);
-				System.out.println("There has been a charge of 10 dollars");
+				System.out.println("\n" + "There has been a charge of 10 dollars");
 			}
 			else
 			{
-				System.out.println("You don't have enoguh money in the account");
+				System.out.println("\n" + "You don't have enoguh money in the account");
 			}
 		}
 		

@@ -6,10 +6,8 @@ public class PersonalAccount extends Account{
 	{
 		super(fName,lName,add,cy,pvince, bal); 
 	}
-	
-	
 
-	public void towithDraw(double amt)
+	public void withDraw(double amt)
 	{
 		if (amt < super.getBalance())
 		{
@@ -17,16 +15,15 @@ public class PersonalAccount extends Account{
 			
 			if(super.getBalance() < 100) 
 			{
-				super.withDraw(2);
-				System.out.println("There has been a charge of 2 dollars");
+				super.withDraw(-2);
+				System.out.println("\n" + "There has been a charge of 2 dollars");
 			}
 			else
 			{
-				System.out.println("You don't have enoguh money in the account");
+				System.out.println("\n" + "You don't have enoguh money in the account");
 			}
 			
 		}
 	}
-
 }
 
