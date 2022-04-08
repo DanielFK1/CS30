@@ -15,7 +15,7 @@ public class PersonalAccount extends Account{
 			
 			if(super.getBalance() < 100) 
 			{
-				super.withDraw(-2);
+				super.withDraw(2);
 				System.out.println("\n" + "There has been a charge of 2 dollars");
 			}
 			else
