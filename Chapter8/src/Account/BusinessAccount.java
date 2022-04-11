@@ -2,8 +2,6 @@ package Account;
 
 public class BusinessAccount extends Account{
 	
-
-	
 	public BusinessAccount(String fName, String lName,String add, String cy, String pvince,double bal)
 	{
 		super(fName,lName,add,cy,pvince, bal);
@@ -21,9 +19,8 @@ public class BusinessAccount extends Account{
 				super.withDraw(10);
 				System.out.println("\n" + "There has been a charge of 10 dollars");
 			}
-			if (super.getBalance() < 0)
+			else
 			{
-				
 				System.out.println("\n" + "You don't have enoguh money in the account");
 			}
 		}
