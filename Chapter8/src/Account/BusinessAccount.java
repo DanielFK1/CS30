@@ -16,13 +16,14 @@ public class BusinessAccount extends Account{
 		{
 			super.withDraw(amt);
 			
-			if(super.getBalance() < 500) 
+			if(super.getBalance() < 500  ) 
 			{
 				super.withDraw(10);
 				System.out.println("\n" + "There has been a charge of 10 dollars");
 			}
-			else
+			if (super.getBalance() < 0)
 			{
+				
 				System.out.println("\n" + "You don't have enoguh money in the account");
 			}
 		}
