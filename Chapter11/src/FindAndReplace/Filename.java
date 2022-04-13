@@ -1,12 +1,15 @@
 package FindAndReplace;
-
-import java.io.*;
+import java.io.File;
+import java.util.Scanner;
 
 public class Filename {
 	
 	public static void main(String[] args) 
 	{
-		File textfile;
-		File ReplaceandFind = new File("ReplaceandFind.txt");
+		
+		try {
+			File FindandReplace = new File("ReplaceandFind.txt");
+			Scanner Find = new Scanner(FindandReplace);
+			}
 	}
 }
