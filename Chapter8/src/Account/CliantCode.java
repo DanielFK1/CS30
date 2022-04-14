@@ -1,7 +1,6 @@
 package Account;
 
 import java.util.Scanner;
-
 import Account.Customer;
 
 public class CliantCode {
