@@ -9,13 +9,15 @@ public class Filename {
 	{
 		//File FindandReplace = new File("ReplaceandFind.txt");
 		Scanner input = new Scanner(System.in);
-		
 		System.out.println("What is the file name:");
 		String filename = input.nextLine();
-		File name = new File(filename + ".txt");
+		filename = filename + ".txt";
+		File file = new File(filename);
+		
+		
 		
 		try {
-			Scanner Filereader = new Scanner(name);
+			Scanner Filereader = new Scanner(filename);
 			Filereader.close();
 			}
 			catch (FileNotFoundException e) 
