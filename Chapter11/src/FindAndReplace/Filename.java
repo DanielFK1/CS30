@@ -18,8 +18,6 @@ public class Filename {
 			Scanner Filereader = new Scanner(name);
 			Filereader.close();
 			}
-			
-			
 			catch (FileNotFoundException e) 
 			{
 			System.out.println("File does not exist or could not be found.");
