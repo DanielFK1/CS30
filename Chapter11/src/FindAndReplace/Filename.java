@@ -13,7 +13,7 @@ public class Filename {
 		String filename = input.nextLine();
 		filename = filename + ".txt";
 		File file = new File(filename);
-		
+		file.createNewFile();
 		
 		
 		try {
