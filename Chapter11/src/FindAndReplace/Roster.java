@@ -23,7 +23,7 @@ public class Roster {
 			FileOutputStream out = new FileOutputStream(stuname);
 			ObjectOutputStream writestu = new ObjectOutputStream(out);
 			
-			for (int i == 0)
+			for (int i = 0, i < numstu)
 			//for loop required
 			
 				System.out.println("What is the students first name:");
