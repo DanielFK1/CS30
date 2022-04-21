@@ -36,14 +36,13 @@ public class Roster {
 				System.out.println(name);
 				writestu.close(); 
 				
-				}
-			
 			}
 			
-			catch (FileNotFoundException e) 
-			{
-				System.out.println("File does not exist or could not be found.");
-				System.err.println("FileNotFoundException: " + e.getMessage());
+		}
+			
+		catch (FileNotFoundException e) 
+		{
+			System.out.println("File does not exist or could not be found.");
+			System.err.println("FileNotFoundException: " + e.getMessage());
 			}
 	}
-}
