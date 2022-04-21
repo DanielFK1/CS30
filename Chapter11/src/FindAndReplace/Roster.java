@@ -7,27 +7,37 @@ public class Roster {
 	
 	public static void main(String[] args) 
 	{
-		File stuname = new File ("studentsname.txt");
+		File stuname; 
+		Scanner input = new Scanner(System.in);
+		//Ask the file name
+			System.out.println("What is the file name:");
+			String file = input.next();
+			
+			File stuname = new File(file + ".txt");
+		
+		//Ask how many students
+			System.out.println("How many students are in the class:");
+			int numstu = input.nextInt();
+		
+		
 		
 		try {
 			FileOutputStream out = new FileOutputStream(stuname);
 			ObjectOutputStream writestu = new ObjectOutputStream(out);
 			
-			Scanner input = new Scanner(System.in);
+			//for loop required
 			
-			System.out.println("What is the students first name:");
-			String firstname = input.nextLine();
-			
-			System.out.println("What is the students last name:");
-			String lastname = input.nextLine();	
-			String name = (firstname + lastname);
-			
-			
-			System.out.println("How many students are in the class:");
-			int numstu = input.nextInt();
-			
-			writestu.writeObject(name);
-			writestu.close();
+				System.out.println("What is the students first name:");
+				String firstname = input.next();
+				
+				System.out.println("What is the students last name:");
+				String lastname = input.next();	
+				
+				writestu.writeObject(new Stu);
+				System.out.println(name);
+				writestu.close(); 
+				
+				}
 			
 			}
 			
@@ -35,9 +45,6 @@ public class Roster {
 			{
 				System.out.println("File does not exist or could not be found.");
 				System.err.println("FileNotFoundException: " + e.getMessage());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 	}
 }
