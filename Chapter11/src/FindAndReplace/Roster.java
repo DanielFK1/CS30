@@ -3,7 +3,7 @@ package FindAndReplace;
 import java.io.*;
 import java.util.Scanner;
 
-public class Roster {
+public class Roster{
 	
 	public static void main(String[] args) 
 	{
@@ -33,13 +33,18 @@ public class Roster {
 				System.out.println("What is the students last name:");
 				String lastname = input.next();	
 				
-				String name = (firstname + " " + lastname);
-				writestu.writeObject(name);
+				//String name = ( + " " + );
+				writestu.writeObject(new StuName(firstname,lastname ));
 				}	
 				
 				out.close();
 				writestu.close();
 				System.out.println("Data has been added");
+				
+				FileInputStream in = new FileInputStream(stuname);
+				ObjectInputStream readstu = new ObjectInputStream(in);
+				readstu.readObject();
+				readstu.close();
 			}
 				
 				catch (FileNotFoundException e) 

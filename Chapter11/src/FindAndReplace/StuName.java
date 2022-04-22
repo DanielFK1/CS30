@@ -5,7 +5,11 @@ import java.io.Serializable;
 public class StuName implements Serializable 
 {
 	//declare private 
-	public void Roster(String fName, String lName) {
+	private Roster r;
+	
+	public void StuName(String firstname, String lastname) {
+		
+		r = new Roster(firstname,lastname);
 		
 		
 	}
