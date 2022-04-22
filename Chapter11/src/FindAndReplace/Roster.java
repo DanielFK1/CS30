@@ -33,7 +33,8 @@ public class Roster {
 				System.out.println("What is the students last name:");
 				String lastname = input.next();	
 				
-				writestu.writeObject(firstname + lastname);
+				String name = (firstname + " " + lastname);
+				writestu.writeObject(name);
 				}	
 				
 				out.close();
