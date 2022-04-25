@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Roster{
 	
-	public static void main(String[] args) 
+	public Roster(String firstname, String lastname) {
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException 
 	{
 		File stuname; 
 		Scanner input = new Scanner(System.in);
@@ -33,7 +36,6 @@ public class Roster{
 				System.out.println("What is the students last name:");
 				String lastname = input.next();	
 				
-				//String name = ( + " " + );
 				writestu.writeObject(new StuName(firstname,lastname ));
 				}	
 				
@@ -53,10 +55,11 @@ public class Roster{
 					System.err.println("FileNotFoundException: " + e.getMessage());
 				}
 				
-				catch (IOException e) {
+				catch (IOException e) 
+				{
 					System.out.println("Problem with input/output");
 					System.err.println("IOException: " + e.getMessage());
-					}
+				}
 			
 		}
 			
