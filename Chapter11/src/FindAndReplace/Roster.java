@@ -27,9 +27,7 @@ public class Roster{
 			ObjectOutputStream writestu = new ObjectOutputStream(out);
 			
 			for (int i = 0; i < numstu; i++) 
-				{
-			//for loop required
-			
+				{	
 				System.out.println("What is the students first name:");
 				String firstname = input.next();
 				
