@@ -9,11 +9,14 @@ public class StuName implements Serializable
 	private String lastname;
 
 	//create the constructor for the two names
-	public StuName(String firstname, String lastname) {	
+	public StuName(String fname, String lname) 
+	{	
+		firstname =  fname;
+		lastname = lname;
 	}
 	
 	//create the toString for the first and last name
 	public String toString() {
-		return(firstname + lastname);
+		return(firstname + " " + lastname + "\n");
 	}
 }

@@ -39,13 +39,16 @@ public class Roster{
 				writestu.writeObject(new StuName(firstname,lastname ));
 				}	
 				
-				out.close();
+				//out.close();
 				writestu.close();
 				System.out.println("Data has been added");
 				
 				FileInputStream in = new FileInputStream(stuname);
 				ObjectInputStream readstu = new ObjectInputStream(in);
-				readstu.readObject();
+				for (int i = 0; i < numstu; i++) 
+				{
+					System.out.print((StuName)readstu.readObject());
+				}
 				readstu.close();
 			}
 				
