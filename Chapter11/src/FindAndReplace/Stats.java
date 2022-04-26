@@ -9,6 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
+
 public class Stats {
 	public static void main(String[] args)
 	{
@@ -39,6 +40,13 @@ public class Stats {
 				
 				writestu.writeObject(new Stugrades(firstname,lastname,stugrades));
 				}	
+				
+			for (int grades= 0; grades< stugrades; grades++)
+				{
+					grades += stugrades;
+					int Average = grades/numstudents ;
+					System.out.println(Average);
+				}
 				
 				out.close();
 				writestu.close();
