@@ -41,13 +41,6 @@ public class Stats {
 				writestu.writeObject(new Stugrades(firstname,lastname,stugrades));
 				}	
 				
-			for (int grades= 0; grades< stugrades; grades++)
-				{
-					grades += stugrades;
-					int Average = grades/numstudents ;
-					System.out.println(Average);
-				}
-				
 				out.close();
 				writestu.close();
 				System.out.println("Data has been added");
