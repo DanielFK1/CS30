@@ -1,11 +1,17 @@
 package FindAndReplace;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInput;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
@@ -13,6 +19,11 @@ import java.util.Scanner;
 public class Stats {
 	public static void main(String[] args)
 	{
+		FileReader in;
+		BufferedReader readFile;
+		FileWriter out;
+		BufferedWriter writeFile;
+		
 		File stats; 
 		Scanner input = new Scanner(System.in);
 		
@@ -26,8 +37,8 @@ public class Stats {
 		int numstudents = input.nextInt();
 		
 		try {
-			FileOutputStream out = new FileOutputStream(stats);
-			ObjectOutputStream writestu = new ObjectOutputStream(out);
+			out = new FileWriter(stats);
+			writeFile =  new BufferedWriter(out);
 			
 			for (int i = 0; i < numstudents; i++) 
 				{	
@@ -45,20 +56,22 @@ public class Stats {
 				highestmark = Math.max(highestmark, stugrades);
 				lowestmark = Math.min(lowestmark, stugrades);
 						
-				writestu.writeObject(new Stugrades(firstname,lastname,stugrades,totalgrade,counter,highestmark,lowestmark));
+				(writeFile).write(new Stugrades(firstname,lastname,stugrades,totalgrade,counter,highestmark,lowestmark));
 				}	
 				
+				writeFile.close();
 				out.close();
-				writestu.close();
+				
 				System.out.println("Data has been added");
 				
-				FileInputStream in = new FileInputStream(stats);
-				ObjectInputStream readstu = new ObjectInputStream(in);
+				in = new FileReader(stats);
+				readFile =  new BufferedReader(in);
+				
 				for (int i = 0; i < numstudents; i++) 
 				{
-					System.out.print((Stugrades)readstu.readObject());
+					System.out.print((Stugrades)(readFile).readObject());
 				}
-				readstu.close();
+				readFile.close();
 			}
 		
 			catch (FileNotFoundException e) 

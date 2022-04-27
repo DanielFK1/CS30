@@ -2,7 +2,7 @@ package FindAndReplace;
 
 import java.io.Serializable;
 
-public class Stugrades implements Serializable 
+public class Stugrades 
 {
 	private String firstname;
 	private String lastname;
