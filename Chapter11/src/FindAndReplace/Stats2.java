@@ -29,8 +29,6 @@ public class Stats2 {
 		
 		File stats; 
 		Scanner input = new Scanner(System.in);
-		
-		float totalgrade = 0,counter = 0, highestmark = 0, lowestmark = 0;
 
 		System.out.println("What is the file name:");
 		String file = input.next();
@@ -81,9 +79,6 @@ public class Stats2 {
 			
 				}
 		}
-		
-	
-
 		
 		catch (FileNotFoundException e) 
 		{
