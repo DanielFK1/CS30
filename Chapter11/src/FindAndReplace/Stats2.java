@@ -63,13 +63,12 @@ public class Stats2 {
 				in = new FileReader(stats);
 				readFile =  new BufferedReader(in);
 				
-				String score1;
 				
-				while ((score1 = readFile.readLine()) != null) 
+				while ((score = readFile.readLine()) != null) 
 				{
 					numScore += 1;
-					System.out.print(score1);
-					totalscore += Double.parseDouble(score1);
+					System.out.print(score);
+					totalscore += Double.parseDouble(score);
 				}
 				
 				avescore = totalscore/ numScore;
