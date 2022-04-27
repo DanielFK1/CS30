@@ -15,6 +15,8 @@ public class Stats {
 	{
 		File stats; 
 		Scanner input = new Scanner(System.in);
+		
+		float totalgrade = 0,counter = 0;
 
 		System.out.println("What is the file name:");
 		String file = input.next();
@@ -36,9 +38,12 @@ public class Stats {
 				String lastname = input.next();	
 				
 				System.out.println("Enter the test score:");
-				int stugrades = input.nextInt();
+				int stugrades = (int) input.nextFloat();
 				
-				writestu.writeObject(new Stugrades(firstname,lastname,stugrades));
+				totalgrade += stugrades;
+				counter = numstudents;
+						
+				writestu.writeObject(new Stugrades(firstname,lastname,stugrades,totalgrade,counter));
 				}	
 				
 				out.close();
