@@ -17,12 +17,12 @@ import java.util.Scanner;
 
 
 public class Stats2 {
-	public static void main(String[] args) throws ClassNotFoundException
+	public static void main(String[] args)
 	{
 		FileWriter out;
 		BufferedWriter writeFile;
 		
-		int score;
+		String score;
 		double avescore;
 		double totalscore = 0;
 		int numScore = 0;
@@ -88,6 +88,11 @@ public class Stats2 {
 		{
 			System.out.println("Problem with input/output");
 			System.err.println("IOException: " + e.getMessage());
+		}
+		catch (ClassNotFoundException e)
+		{
+			System.out.println("Class could not be used to cast object");
+			System.err.println("ClassNotFoundException: " + e.getMessage());
 		}
 		
 	}
