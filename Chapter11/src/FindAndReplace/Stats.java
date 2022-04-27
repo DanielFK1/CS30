@@ -16,7 +16,7 @@ public class Stats {
 		File stats; 
 		Scanner input = new Scanner(System.in);
 		
-		float totalgrade = 0,counter = 0;
+		float totalgrade = 0,counter = 0, highestmark = 0, lowestmark = 0;
 
 		System.out.println("What is the file name:");
 		String file = input.next();
@@ -42,8 +42,10 @@ public class Stats {
 				
 				totalgrade += stugrades;
 				counter = numstudents;
+				highestmark = Math.max(highestmark, stugrades);
+				lowestmark = Math.min(lowestmark, stugrades);
 						
-				writestu.writeObject(new Stugrades(firstname,lastname,stugrades,totalgrade,counter));
+				writestu.writeObject(new Stugrades(firstname,lastname,stugrades,totalgrade,counter,highestmark,lowestmark));
 				}	
 				
 				out.close();
