@@ -17,13 +17,13 @@ import java.util.Scanner;
 
 
 public class Stats2 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws ClassNotFoundException
 	{
 		FileWriter out;
 		BufferedWriter writeFile;
-		
-		String score;
-		double avescore;
+		String name;
+		String score = null;
+		double avescore = 0;
 		double totalscore = 0;
 		int numScore = 0;
 		
@@ -32,51 +32,61 @@ public class Stats2 {
 
 		System.out.println("What is the file name:");
 		String file = input.next();
-		stats = new File(file + ".txt");
+		
 		
 		System.out.println("How many students grades are being put in:");
 		int numstudents = input.nextInt();
 		
 		try {
+			stats = new File(file);
 			out = new FileWriter(stats);
 			writeFile =  new BufferedWriter(out);
 			
 			for (int i = 0; i < numstudents; i++) 
 				{	
 				System.out.println("What is the students name:");
-				String name = input.next();
+				name = input.next();
 				
 				System.out.println("Enter the test score:");
-				score = input.nextInt();
+				score = input.next();
 				
-				writeFile.write(name);
-				writeFile.newLine();
-				writeFile.write(String.valueOf(score));
+				writeFile.write(name + "'s test grade is a " + score);
 				writeFile.newLine();
 				
+				numScore += 1;
+				totalscore += Double.parseDouble(score);
+				avescore = totalscore/ numScore;
 				}
+			writeFile.write("\n" + "Test average = " + avescore);
+
 			
-			for (int i = 0; i < numstudents; i++) 
-			{	
+			writeFile.close();
+			out.close();
+			System.out.println("Data has been written to the file");
+		}
+		catch (IOException e) 
+		{
+			System.out.println("Problem with input/output");
+			System.err.println("IOException: " + e.getMessage());
+		}
+		
+		try
+		{
+				stats = new File(file);
 				FileReader in;
 				BufferedReader readFile;
 				in = new FileReader(stats);
 				readFile =  new BufferedReader(in);
 				
 				
-				while ((score = readFile.readLine()) != null) 
+				while ((name = readFile.readLine()) != null) 
 				{
-					numScore += 1;
-					System.out.print(score);
-					totalscore += Double.parseDouble(score);
+					score = readFile.readLine();
 				}
-				
-				avescore = totalscore/ numScore;
-				System.out.println("Average = " + avescore);
 				readFile.close();
 				in.close();
 			
-				}
+				
 		}
 		
 		catch (FileNotFoundException e) 
@@ -88,11 +98,6 @@ public class Stats2 {
 		{
 			System.out.println("Problem with input/output");
 			System.err.println("IOException: " + e.getMessage());
-		}
-		catch (ClassNotFoundException e)
-		{
-			System.out.println("Class could not be used to cast object");
-			System.err.println("ClassNotFoundException: " + e.getMessage());
 		}
 		
 	}
