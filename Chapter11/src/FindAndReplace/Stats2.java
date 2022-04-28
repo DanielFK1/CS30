@@ -26,6 +26,8 @@ public class Stats2 {
 		double avescore = 0;
 		double totalscore = 0;
 		int numScore = 0;
+		int highestmark;
+		int lowestmark;
 		
 		File stats; 
 		Scanner input = new Scanner(System.in);
@@ -56,6 +58,16 @@ public class Stats2 {
 				numScore += 1;
 				totalscore += Double.parseDouble(score);
 				avescore = totalscore/ numScore;
+				
+				highestmark = Math.max(highestmark, score);
+				writeFile.write(highestmark);
+				writeFile.newLine();
+				
+				lowestmark = Math.min(lowestmark, score);
+				writeFile.write(lowestmark);
+				writeFile.newLine();
+				
+				
 				}
 			writeFile.write("\n" + "Test average = " + avescore);
 
