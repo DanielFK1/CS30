@@ -22,12 +22,12 @@ public class Stats2 {
 		FileWriter out;
 		BufferedWriter writeFile;
 		String name;
-		String score = null;
+		int score = 0;
 		double avescore = 0;
 		double totalscore = 0;
 		int numScore = 0;
-		int highestmark;
-		int lowestmark;
+		int highestmark = 0;
+		int lowestmark = 100;
 		
 		File stats; 
 		Scanner input = new Scanner(System.in);
@@ -50,27 +50,33 @@ public class Stats2 {
 				name = input.next();
 				
 				System.out.println("Enter the test score:");
-				score = input.next();
+				score = input.nextInt();
 				
 				writeFile.write(name + "'s test grade is a " + score);
 				writeFile.newLine();
 				
 				numScore += 1;
-				totalscore += Double.parseDouble(score);
+				totalscore += (score);
+				
+				
 				avescore = totalscore/ numScore;
 				
-				highestmark = Math.max(highestmark, score);
-				writeFile.write(highestmark);
-				writeFile.newLine();
-				
-				lowestmark = Math.min(lowestmark, score);
-				writeFile.write(lowestmark);
-				writeFile.newLine();
-				
-				
+				if(score < lowestmark)
+				{
+					lowestmark = score;
 				}
+				if(score > highestmark)
+				{
+					highestmark = score;
+				}
+				}
+			writeFile.write("Lowest mark is: " + lowestmark);
+			writeFile.newLine();
+			
+			writeFile.write("Highest mark is: " + highestmark);
+			writeFile.newLine();
+			
 			writeFile.write("\n" + "Test average = " + avescore);
-
 			
 			writeFile.close();
 			out.close();
@@ -93,7 +99,7 @@ public class Stats2 {
 				
 				while ((name = readFile.readLine()) != null) 
 				{
-					score = readFile.readLine();
+					 score = readFile.read(score);
 				}
 				readFile.close();
 				in.close();

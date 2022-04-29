@@ -1,3 +1,4 @@
+/*
 package FindAndReplace;
 
 import java.io.Serializable;
@@ -5,18 +6,17 @@ import java.io.Serializable;
 public class StuName implements Serializable 
 {
 	//declare private 
-	private String firstname;
-	private String lastname;
+    private String name;
 
 	//create the constructor for the two names
-	public StuName(String fname, String lname) 
+	public StuName(String n) 
 	{	
-		firstname =  fname;
-		lastname = lname;
+		name = n;
 	}
 	
 	//create the toString for the first and last name
 	public String toString() {
-		return(firstname + " " + lastname + "\n");
+		return(name + "\n");
 	}
 }
+*/
