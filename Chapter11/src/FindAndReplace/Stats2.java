@@ -96,11 +96,6 @@ public class Stats2 {
 				in = new FileReader(stats);
 				readFile =  new BufferedReader(in);
 				
-				
-				while ((name = readFile.readLine()) != null) 
-				{
-					 score = readFile.read(score);
-				}
 				readFile.close();
 				in.close();
 			
