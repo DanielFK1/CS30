@@ -99,7 +99,6 @@ public class Stats2 {
 				readFile.close();
 				in.close();
 			
-				
 		}
 		
 		catch (FileNotFoundException e) 
