@@ -19,7 +19,7 @@ public class FandReplace
 {
 	public static void main(String[] args) throws IOException
 	{
-	String fileContent = null;
+	
 	FileWriter out;
 	BufferedWriter writeFile;
 	FileReader in;
@@ -31,25 +31,24 @@ public class FandReplace
 	Scanner input = new Scanner(System.in);
 
 	System.out.println("What is the file name:");
-	String file = input.next();
-	
-	System.out.println("What word or phrase do you want to search:");
-	String searchword = input.next();
-	
+	String file = input.nextLine();
 	filename = new File(file);
 	
+	System.out.println("What word or phrase do you want to search:");
+	String searchword = input.nextLine();
+	
 	System.out.println("What is the replacement word or phrase:");
-	String replaceword = input.next();
+	String replaceword = input.nextLine();
 	
 	
 	try {
 			in = new FileReader(filename);
 			readFile =  new BufferedReader(in);
 	
-			file = file.replace(".", "WEN.");
+			file = file.replace(".", "WWW.");
 	
 			newFile = new File(file);
-			out = new FileWriter(filename);
+			out = new FileWriter(newFile);
 			writeFile =  new BufferedWriter(out);
 			 
 			while((LineofText = readFile.readLine()) != null) 
@@ -60,8 +59,9 @@ public class FandReplace
 			}
 			writeFile.close();
 			out.close();
+			readFile.close();
 			in.close();
-			readFile.close();	
+				
 		}
 	
 	catch (FileNotFoundException e) 
@@ -74,8 +74,7 @@ public class FandReplace
 		System.out.println("Problem with input/output");
 		System.err.println("IOException: " + e.getMessage());
 	}
-
-
+	
 	}
 }
 
