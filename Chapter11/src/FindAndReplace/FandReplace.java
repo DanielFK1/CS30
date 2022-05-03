@@ -22,30 +22,59 @@ public class FandReplace
 	String fileContent = null;
 	FileWriter out;
 	BufferedWriter writeFile;
+	FileReader in;
+	BufferedReader readFile;
+	String LineofText;
 	
-	File filename; 
+	
+	File filename, newFile; 
 	Scanner input = new Scanner(System.in);
 
 	System.out.println("What is the file name:");
 	String file = input.next();
 	
-	System.out.println("What word do you want to search:");
+	System.out.println("What word or phrase do you want to search:");
 	String searchword = input.next();
 	
-	System.out.println("What is the replacement word:");
+	filename = new File(file);
+	
+	System.out.println("What is the replacement word or phrase:");
 	String replaceword = input.next();
 	
-	filename = new File(file);
-	FileReader in;
-	BufferedReader readFile;
-	in = new FileReader(filename);
-	readFile =  new BufferedReader(in);
 	
-	fileContent = fileContent.replaceAll(searchword, replaceword);
+	try {
+			in = new FileReader(filename);
+			readFile =  new BufferedReader(in);
 	
-	filename = new File(file);
-	out = new FileWriter(filename);
-	writeFile =  new BufferedWriter(out);
+			file = file.replace(".", "WEN.");
+	
+			newFile = new File(file);
+			out = new FileWriter(filename);
+			writeFile =  new BufferedWriter(out);
+			 
+			while((LineofText = readFile.readLine()) != null) 
+			{
+				LineofText = LineofText.replaceAll(searchword, replaceword);
+				writeFile.write(LineofText);
+				writeFile.newLine();
+			}
+			writeFile.close();
+			out.close();
+			in.close();
+			readFile.close();	
+		}
+	
+	catch (FileNotFoundException e) 
+	{
+		System.out.println("File does not exist or could not be found.");
+		System.err.println("FileNotFoundException: " + e.getMessage());
+	}
+	catch (IOException e) 
+	{
+		System.out.println("Problem with input/output");
+		System.err.println("IOException: " + e.getMessage());
+	}
+
 
 	}
 }
