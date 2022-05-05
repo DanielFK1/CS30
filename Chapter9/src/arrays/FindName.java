@@ -24,6 +24,7 @@ public class FindName {
 		String searchname = input.next();
 		
 		
+		
 		return 0;
 	}
 }
