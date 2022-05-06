@@ -23,7 +23,17 @@ public class FindName {
 		System.out.println("Who's name do you want to search: ");
 		String searchname = input.next();
 		
-		
+		for (int i=0; i<Findname.length; i++)
+		{
+			if (Findname[i].equals(searchname))
+			{
+				System.out.print(false);
+			}
+			else 
+			{
+				System.out.println("The name is not in the array");
+			}
+		}
 		
 		return 0;
 	}
