@@ -3,10 +3,9 @@ package arrays;
 import java.util.Scanner;
 
 public class FindName {
-	public static int linear(String[] array, String nametoFind)
+	public static void main(String[] args)
 	{
 		int numname;
-		String names;
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("How many names are you entering: ");
@@ -17,24 +16,22 @@ public class FindName {
 		for(int i = 0; i < numname; i++)
 		{
 			System.out.println("What are the names: ");
-			Findname[i] = input.next();
+			Findname[i]= input.nextLine();
 		}
 		
 		System.out.println("Who's name do you want to search: ");
-		String searchname = input.next();
+		String searchname= input.nextLine();
 		
-		for (int i=0; i<Findname.length; i++)
+		int location = Search.linear(Findname, searchname);
+		
+		if (location == -1)
 		{
-			if (Findname[i].equals(searchname))
-			{
-				System.out.print(false);
-			}
-			else 
-			{
-				System.out.println("The name is not in the array");
-			}
+			System.out.println("Sorry name is not found in array");
 		}
-		
-		return 0;
+		else 
+		{
+			System.out.println("Name found in element " + location);
+		}	
+
 	}
 }
