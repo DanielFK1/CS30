@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FindName {
 	public static void main(String[] args)
 	{
-		int numname;
+		int numname, location;
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("How many names are you entering: ");
@@ -13,7 +13,7 @@ public class FindName {
 		
 		String[] Findname = new String[numname]; 
 		
-		for(int i = 0; i < numname; i++)
+		for(int i = 0; i < Findname.length; i++)
 		{
 			System.out.println("What are the names: ");
 			Findname[i] = input.nextLine();
@@ -22,7 +22,7 @@ public class FindName {
 		System.out.println("Who's name do you want to search: ");
 		String searchname= input.nextLine();
 		
-		int location = Search.linear(Findname, searchname);
+		location = Search.linear(Findname, searchname);
 		
 		if (location == -1)
 		{
@@ -32,6 +32,6 @@ public class FindName {
 		{
 			System.out.println("Name found in element " + location);
 		}	
-
+		
 	}
 }
