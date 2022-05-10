@@ -11,11 +11,12 @@ public class HighestGrade {
 		
 		for(int i = 0; i < 5; i++)
 		{
-			System.out.println("Enter the 5 grades: ");
+			System.out.println("Enter the 5 grades between 0 and 100: ");
 			grades[i] = input.nextInt();
 		}
 		
 		int HighestGrades = grades[0];
+		
 		for(int i = 0; i < grades.length; i++)
 		{
 			if (HighestGrades < grades[i])
