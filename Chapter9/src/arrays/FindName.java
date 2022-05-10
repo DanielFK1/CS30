@@ -16,7 +16,7 @@ public class FindName {
 		for(int i = 0; i < numname; i++)
 		{
 			System.out.println("What are the names: ");
-			Findname[i]= input.nextLine();
+			Findname[i] = input.nextLine();
 		}
 		
 		System.out.println("Who's name do you want to search: ");

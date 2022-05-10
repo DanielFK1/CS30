@@ -7,7 +7,9 @@ public class Search {
 			
 			if (array[index].equals(nametofind)) {
 				return(index);
-			} else {
+			} 
+			else 
+			{
 				return(-1);
 			}
 		}
