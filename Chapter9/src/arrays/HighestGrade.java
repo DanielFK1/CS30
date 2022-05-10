@@ -1,7 +1,6 @@
 package arrays;
 
 import java.util.Scanner;
-import java.math.*;
 
 public class HighestGrade {
 	public static void main(String[] args)
@@ -10,14 +9,14 @@ public class HighestGrade {
 		int[] grades = new int[5];
 		
 		
-		for(int i = 1; i < 6; i++)
+		for(int i = 0; i < 5; i++)
 		{
 			System.out.println("Enter the 5 grades: ");
 			grades[i] = input.nextInt();
 		}
 		
-		int HighestGrades = grades[1];
-		for(int i = 1; i < 6; i++)
+		int HighestGrades = grades[0];
+		for(int i = 0; i < grades.length; i++)
 		{
 			if (HighestGrades < grades[i])
 				HighestGrades = grades[i];	
