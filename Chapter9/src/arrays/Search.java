@@ -5,6 +5,15 @@ public class Search {
 		{
 			int index = 0;
 			
+			if (array[index].equals(nametofind)) 
+			{
+				return(index);
+			} 
+			
+			while ((array[index] != nametofind) && (index < array.length - 1))
+			{
+				index += 1;
+			}
 			
 			if (array[index].equals(nametofind)) 
 			{
