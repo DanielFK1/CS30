@@ -13,7 +13,7 @@ public class FindName {
 		
 		String[] Findname = new String[numname]; 
 		
-		for(int i = 0; i < numname; i++)
+		for(int i = 0; i < Findname.length; i++)
 		{
 			System.out.println("What are the names: ");
 			Findname[i] = input.next();
@@ -29,7 +29,7 @@ public class FindName {
 		}
 		else 
 		{
-				System.out.println("First occurance is element " + location);
+			System.out.println("First occurance is element " + location);
 		}	
 		
 	}
