@@ -26,19 +26,30 @@ public class LocalBank {
 				{
 					System.out.print("Enter account ID: ");
 					acctID = input.next();
-					if (action.equalsIgnoreCase("D")) {
+					if (action.equalsIgnoreCase("D")) 
+					{
 						System.out.print("Enter deposit amount: ");
 						amt = input.nextDouble();
 						easySave.transaction(1, acctID, amt);
-					} else if (action.equalsIgnoreCase("W")) {
+					} 
+					else if (action.equalsIgnoreCase("W")) 
+					{
 						System.out.print("Enter withdrawal amount: ");
 						amt = input.nextDouble();
 						easySave.transaction(2, acctID, amt);
-					} else if (action.equalsIgnoreCase("C")) {
+					} 
+					else if (action.equalsIgnoreCase("C")) 
+					{
 						easySave.checkBalance(acctID);
-					} else if (action.equalsIgnoreCase("R")) {
+					} 
+					else if (action.equalsIgnoreCase("R")) 
+					{
 						easySave.deleteAccount(acctID);
 					}
+					else if (action.equalsIgnoreCase("M")) 
+					{
+						easySave.(acctID);
+					}		
 					//write code to modify information if action equals "M"
 				}
 			} while (!action.equalsIgnoreCase("Q"));

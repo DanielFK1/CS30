@@ -3,7 +3,7 @@ package arrays;
 public class Customer {
 		private String firstName, lastName,street,city,province,postalcode;
 		
-		public Customer(String fName, String lName, String s, String cty, String prov, String pcode) //modify constructor to include street, city, province, postal code
+		public Customer(String fName, String lName, String s, String cty, String prov, String pcode)
 		{
 			firstName = fName;
 			lastName = lName;

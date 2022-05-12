@@ -15,9 +15,7 @@ public class Bank {
 		{
 			Account newAcct;
 			double bal;
-			String fName, lName;
-
-		//add your string variables for street, city, province, postal code
+			String fName, lName,s,cty,prov,pcode;
 
 			Scanner input = new Scanner(System.in);
 			
@@ -26,22 +24,25 @@ public class Bank {
 
 			System.out.print("Last name: ");
 			lName = input.nextLine();
+			
+			System.out.print("Street: ");
+			s = input.nextLine();
 
+			System.out.print("City: ");
+			cty = input.nextLine();
 
-		//get customer street and record street
+			System.out.print("Province: ");
+			prov = input.nextLine();
 
-		//get city 
-
-		//get province
-
-		//get postal code
+			System.out.print("Postal code: ");
+			pcode = input.nextLine();
 
 
 
 			System.out.print("Beginning balance: ");
 			bal = input.nextDouble();
 			
-			newAcct = new Account(bal, fName, lName); //update this constructor to include street, city, province, postal code	
+			newAcct = new Account(bal, fName, lName,s,cty,prov,pcode);
 											//create acct object
 			accounts.add(newAcct);						//add account to bank accounts
 			
@@ -116,11 +117,11 @@ public class Bank {
 
 			//Create a modifyAccount(String AcctID) method 
 			if(acctIndex > 1) 
-				{
+			{
 				acct = accounts.get..
 				acct.changeAddress()
 				//print acct to the screen
-				}
+			}
 
 			else
 			{
