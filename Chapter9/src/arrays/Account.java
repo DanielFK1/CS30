@@ -8,17 +8,17 @@ public class Account {
 	private Customer cust;
 	private String acctID;
 	
-	public Account(double bal, String fName, String lName)//include street, city, province or state, postal code or zip code
+	public Account(double bal, String fName, String lName, String s,String cty,String prov, String pcode)
 	 {
 		balance = bal;
-		cust = new Customer(fName, lName);//this constructor should reflect the new additions above, street, city, province, postal code
+		cust = new Customer(fName, lName, s, cty, prov, pcode);
 		acctID = fName.substring(0,1) + lName;
 	}
 	
 
 	public Account(String ID) {
 		balance = 0;
-		cust = new Customer("", "");
+		cust = new Customer("", "", "", "", "", "");
 		acctID = ID;
 	}
 
@@ -44,10 +44,14 @@ public class Account {
 	 	}
 	}
 
-
-
 	//Create a changeAddress() method that calls the cust object from above in order to change
 	//Street, city, province, postalCode
+
+	public void changeAddress(Object customer)
+	
+	{
+		
+	}
 
 	public boolean equals(Object acct) {
 		Account testAcct = (Account)acct;

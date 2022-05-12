@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Bank {
 		private ArrayList<Account> accounts;
 			
-		public Bank() {
+		public Bank() 
+		{
 			accounts = new ArrayList<Account>();
 		}
 		
@@ -48,28 +49,35 @@ public class Bank {
 		}
 
 		
-		public void deleteAccount(String acctID) {
+		public void deleteAccount(String acctID) 
+		{
 			int acctIndex;
 			Account acctToMatch;
 			
 		 	acctToMatch = new Account(acctID);
 		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
-		 	if (acctIndex > -1) {
+		 	if (acctIndex > -1) 
+		 	{
 		 		accounts.remove(acctIndex);					//remove account
 		 		System.out.println("Account removed.");
-		 	} else {
+		 	} 
+		 	
+		 	else 
+		 	{
 		 		System.out.println("Account does not exist.");
 		 	}
 		}
 		
 
-		public void transaction(int transCode, String acctID, double amt) {
+		public void transaction(int transCode, String acctID, double amt) 
+		{
 			int acctIndex;
 			Account acctToMatch, acct;
 			
 		 	acctToMatch = new Account(acctID);
 		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
-		 	if (acctIndex > -1) {
+		 	if (acctIndex > -1) 
+		 	{
 		 		acct = accounts.get(acctIndex);				//retrieve object to modify
 		 		if (transCode == 1) {
 		 			acct.deposit(amt);
@@ -80,39 +88,44 @@ public class Bank {
 		 			accounts.set(acctIndex, acct);		//replace object with updated object
 		 			System.out.println(acct);
 		 		}
-		 	} else {
+		 	} 
+		 	
+		 	else 
+		 	{
 		 		System.out.println("Account does not exist.");
 		 	}
 		}
 
 		
-		public void checkBalance(String acctID) {
+		public void checkBalance(String acctID) 
+		{
 			int acctIndex;
 			Account acctToMatch, acct;
 			
 		 	acctToMatch = new Account(acctID);
 		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
-		 	if (acctIndex > -1) {
+		 	if (acctIndex > -1) 
+		 	{
 		 		acct = accounts.get(acctIndex);	//retrieve object to display
 		 		System.out.println(acct);
-		 	} else {
+		 	} else 
+		 	
+		 	{
 		 		System.out.println("Account does not exist.");
 		 	}
 
+			//Create a modifyAccount(String AcctID) method 
+			if(acctIndex > 1) 
+				{
+				acct = accounts.get..
+				acct.changeAddress()
+				//print acct to the screen
+				}
 
-
-
-		//Create a modifyAccount(String AcctID) method 
-		//if(acctIndex > 1) 
-		{
-			acct = accounts.get..
-			acct.changeAddress()
-			//print acct to the screen
-		}
-		else
-		{
-		  print Account does not exits
-		}	
+			else
+			{
+				print Account does not exits
+			}	
 
 
 	}

@@ -1,17 +1,16 @@
 package arrays;
 
 public class Customer {
-		private String firstName, lastName;
-
-		//create String variables street, city, province, postal code	
-
+		private String firstName, lastName,street,city,province,postalcode;
 		
-		public Customer(String fName, String lName) //modify constructor to include street, city, province, postal code
+		public Customer(String fName, String lName, String s, String cty, String prov, String pcode) //modify constructor to include street, city, province, postal code
 		{
 			firstName = fName;
 			lastName = lName;
-
-			//reflect the changes in the parameter
+			street = s;
+			city = cty;
+			province = prov;
+			postalcode = pcode;
 		}
 		
 
