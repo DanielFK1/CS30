@@ -25,8 +25,7 @@ public class Customer {
 		public String toString() {
 			String custString;
 
-			//update this string so that it contains the street, city, province, and postal code
-			custString = firstName + " " + lastName + "\n";
+			custString = firstName + " " + lastName + " " + street + " " + city + " " + province + " " + postalcode +  "\n";
 		 	return(custString);
 		}
 
