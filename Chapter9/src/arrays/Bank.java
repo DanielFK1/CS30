@@ -114,20 +114,30 @@ public class Bank {
 		 	{
 		 		System.out.println("Account does not exist.");
 		 	}
+		}
 
-			//Create a modifyAccount(String AcctID) method 
+		public void modifyAccount(String acctID) 
+		{
+			int acctIndex = 0;
+			Account acct,acctToMatch;
+		 	
+			acctToMatch = new Account(acctID);
+		 	acctIndex = accounts.indexOf(acctToMatch);
+			
 			if(acctIndex > 1) 
-			{
-				acct = accounts.get..
-				acct.changeAddress()
-				//print acct to the screen
-			}
+				{
+					acct = accounts.get(acctIndex);
+					acct.changeAddress(acct);
+					//print acct to the screen
+				}
 
 			else
-			{
-				print Account does not exits
-			}	
+				{
+					System.out.print( "Account does not exits" + "\n");
+				}	
 
 
+		}
+
+			
 	}
-}

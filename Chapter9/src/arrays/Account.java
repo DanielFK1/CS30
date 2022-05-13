@@ -47,10 +47,17 @@ public class Account {
 	//Create a changeAddress() method that calls the cust object from above in order to change
 	//Street, city, province, postalCode
 
-	public void changeAddress(Object customer)
-	
+	public boolean changeAddress(Object customer)
 	{
-		
+		Account testAcct = (Account)customer;
+		if (cust.equals(testAcct.cust))
+		{
+			return(true);
+		}
+		else
+		{
+			return(false);
+		}
 	}
 
 	public boolean equals(Object acct) {

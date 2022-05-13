@@ -48,9 +48,8 @@ public class LocalBank {
 					}
 					else if (action.equalsIgnoreCase("M")) 
 					{
-						//easySave.(acctID);
+						easySave.modifyAccount(acctID);
 					}		
-					//write code to modify information if action equals "M"
 				}
 			} while (!action.equalsIgnoreCase("Q"));
 		}
