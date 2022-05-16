@@ -123,7 +123,7 @@ public class Bank {
 			acctToMatch = new Account(acctID);
 		 	acctIndex = accounts.indexOf(acctToMatch);
 			
-			if(acctIndex > 1) 
+			if(acctIndex > -1) 
 				{
 					acct = accounts.get(acctIndex);
 					String s,cty,prov,pcode;
@@ -144,7 +144,7 @@ public class Bank {
 					
 					acct.changeAddress(s,cty,prov,pcode);
 					
-					System.out.print(acct);
+					System.out.println(acct);
 				}
 
 			else
