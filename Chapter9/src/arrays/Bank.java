@@ -43,8 +43,7 @@ public class Bank {
 			bal = input.nextDouble();
 			
 			newAcct = new Account(bal, fName, lName,s,cty,prov,pcode);
-											//create acct object
-			accounts.add(newAcct);						//add account to bank accounts
+			accounts.add(newAcct);
 			
 			System.out.println("Account created. Account ID is: " + newAcct.getID());
 		}
@@ -59,7 +58,7 @@ public class Bank {
 		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
 		 	if (acctIndex > -1) 
 		 	{
-		 		accounts.remove(acctIndex);					//remove account
+		 		accounts.remove(acctIndex);
 		 		System.out.println("Account removed.");
 		 	} 
 		 	
@@ -127,8 +126,25 @@ public class Bank {
 			if(acctIndex > 1) 
 				{
 					acct = accounts.get(acctIndex);
-					acct.changeAddress(acct);
-					//print acct to the screen
+					String s,cty,prov,pcode;
+
+					Scanner input = new Scanner(System.in);
+					
+					System.out.print("New Street: ");
+					s = input.nextLine();
+
+					System.out.print("New City: ");
+					cty = input.nextLine();
+
+					System.out.print("New Province: ");
+					prov = input.nextLine();
+
+					System.out.print("New Postal code: ");
+					pcode = input.nextLine();
+					
+					acct.changeAddress(s,cty,prov,pcode);
+					
+					System.out.print(acct);
 				}
 
 			else

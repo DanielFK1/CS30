@@ -14,6 +14,7 @@ public class LocalBank {
 			do {
 				System.out.println("\nDeposit\\Withdrawal\\Check balance");
 				System.out.println("Add an account\\Remove an account");
+				System.out.println("Modify an account");
 				System.out.println("Quit\n");
 				System.out.print("Enter choice: ");
 				action = input.next();

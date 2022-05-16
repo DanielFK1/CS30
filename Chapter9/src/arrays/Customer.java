@@ -14,13 +14,25 @@ public class Customer {
 		}
 		
 
-		//create changeCity method that asks the user their city and records city in a variable above
-
-		//create changeStreet method that asks the user their street and records street in a variable above
-
-		//create changeProvince method that asks the user their province and records province in a variable above
-
-		//create changePostalCode method that asks the user their postal code and records postal code in a variable above
+		public void changeCity(String cty)
+			{
+				city = cty;
+			}
+		
+		public void changeStreet(String s)
+			{
+				street = s;
+			}
+		
+		public void changeProvince(String prov)
+			{
+				province = prov;
+			}
+		
+		public void changePostalCode(String pcode)
+			{
+				postalcode = pcode;
+			}
 
 		public String toString() {
 			String custString;
@@ -28,7 +40,7 @@ public class Customer {
 			custString = firstName + " " + lastName + " " + street + " " + city + " " + province + " " + postalcode +  "\n";
 		 	return(custString);
 		}
-
+		
 	}
 
 

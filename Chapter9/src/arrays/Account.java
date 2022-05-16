@@ -44,20 +44,12 @@ public class Account {
 	 	}
 	}
 
-	//Create a changeAddress() method that calls the cust object from above in order to change
-	//Street, city, province, postalCode
-
-	public boolean changeAddress(Object customer)
+	public void changeAddress(String s,String cty,String prov,String pcode)
 	{
-		Account testAcct = (Account)customer;
-		if (cust.equals(testAcct.cust))
-		{
-			return(true);
-		}
-		else
-		{
-			return(false);
-		}
+		cust.changeStreet(s);
+		cust.changeCity(cty);
+		cust.changeProvince(prov);
+		cust.changePostalCode(pcode);
 	}
 
 	public boolean equals(Object acct) {
