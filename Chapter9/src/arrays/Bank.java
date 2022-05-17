@@ -75,17 +75,17 @@ public class Bank {
 			Account acctToMatch, acct;
 			
 		 	acctToMatch = new Account(acctID);
-		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
+		 	acctIndex = accounts.indexOf(acctToMatch);	
 		 	if (acctIndex > -1) 
 		 	{
-		 		acct = accounts.get(acctIndex);				//retrieve object to modify
+		 		acct = accounts.get(acctIndex);				
 		 		if (transCode == 1) {
 		 			acct.deposit(amt);
-		 			accounts.set(acctIndex, acct);		//replace object with updated object
+		 			accounts.set(acctIndex, acct);		
 		 			System.out.println(acct);
 		 		} else if (transCode == 2) {
 		 			acct.withdrawal(amt);
-		 			accounts.set(acctIndex, acct);		//replace object with updated object
+		 			accounts.set(acctIndex, acct);		
 		 			System.out.println(acct);
 		 		}
 		 	} 
@@ -103,10 +103,10 @@ public class Bank {
 			Account acctToMatch, acct;
 			
 		 	acctToMatch = new Account(acctID);
-		 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
+		 	acctIndex = accounts.indexOf(acctToMatch);
 		 	if (acctIndex > -1) 
 		 	{
-		 		acct = accounts.get(acctIndex);	//retrieve object to display
+		 		acct = accounts.get(acctIndex);
 		 		System.out.println(acct);
 		 	} else 
 		 	
