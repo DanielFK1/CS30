@@ -23,10 +23,16 @@ public class RedButton {
 
 	        //Use your Phidgets | Here is where you use your Phidgets! This code checks the state of the button and prints true/false when the button is pressed/released. The sleep function means the button state is only checked every 150 milliseconds. Sleeping is used to make it easier to read the console output and to put less stress on your CPU.
 	        while(true){
-	            System.out.println("Red Button State: " + redButton.getState());
-	            Thread.sleep(1000);
-	            System.out.println("Green Button State: " + greenButton.getState());
-	            Thread.sleep(1000);
+	        	if (redButton.getState() == true)
+	        	{
+	        		System.out.println("Red Button State: " + redButton.getState());
+	        		Thread.sleep(1000);
+	        	}
+	        	if (greenButton.getState() == true)
+	        	{
+	        		System.out.println("Green Button State: " + redButton.getState());
+	        		Thread.sleep(1000);
+	        	}
 	       }
 	  }
 }
