@@ -12,7 +12,7 @@ public class ButtonsandLED {
 	        DigitalOutput redLED = new DigitalOutput();
 	        DigitalInput greenButton = new DigitalInput();
 	        DigitalOutput greenLED = new DigitalOutput();
-
+	        
 	        //Address | Address your four objects which lets your program know where to find them.
 	        redButton.setHubPort(5);
 	        redButton.setIsHubPortDevice(true);
@@ -29,10 +29,13 @@ public class ButtonsandLED {
 	        greenButton.open(1000);
 	        greenLED.open(1000);
 
+	        	
+	        int count = 0;
 	        //Use your Phidgets | This code will turn on the LED when the matching button is pressed and turns off the LED when the matching button is released. The sleep function slows down the loop so the button state is only checked every 150ms.
 	        while(true){
-
-	            if( redButton.getState()){
+	        	
+	        	Object redButtonState = false;
+	            if(redButton.getState() && !redButtonState){
 	                redLED.setState(false);
 	            } else {
 	                redLED.setState(true);
