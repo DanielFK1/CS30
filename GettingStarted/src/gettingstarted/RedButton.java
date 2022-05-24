@@ -30,7 +30,7 @@ public class RedButton {
 	        	}
 	        	if (greenButton.getState() == true)
 	        	{
-	        		System.out.println("Green Button State: " + redButton.getState());
+	        		System.out.println("Green Button State: " + greenButton.getState());
 	        		Thread.sleep(1000);
 	        	}
 	       }

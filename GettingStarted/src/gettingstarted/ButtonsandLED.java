@@ -45,6 +45,12 @@ public class ButtonsandLED {
 	            }
 
 	            Thread.sleep(150);
+	            
+	            if (redButton.getState() == true)
+	        	{
+	        		
+	        		Thread.sleep(1000);
+	        	}
 	        }
 	    }
 	}
