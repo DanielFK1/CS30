@@ -41,6 +41,8 @@ public class ButtonsandLED {
 	            } 
 	            else 
 	            {
+	            	count += 1;
+	            	System.out.println("Red Button has been pressed " + count);
 	                redLED.setState(true);
 	            }
 	            
