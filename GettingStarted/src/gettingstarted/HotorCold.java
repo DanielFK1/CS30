@@ -21,14 +21,14 @@ public class HotorCold
 	     {
 	    	 if (temperatureSensor.getTemperature() < 21 || temperatureSensor.getTemperature() > 24)
 	    	 {
-	    		 redLED.setState(true);
+	    		 greenLED.setState(true);
 	    		 int Temp = (int) temperatureSensor.getTemperature();
 	    		 System.out.println("Temperature: " + Temp);
 	    		 Thread.sleep(1000);
 	    	 }
 	    	 else
 	    	 {
-	    		 greenLED.setState(true);
+	    		 redLED.setState(true);
 	    		 int Temp = (int) temperatureSensor.getTemperature();
 	    		 System.out.println("Temperature: " + Temp + "°C");
 	    		 Thread.sleep(1000);
