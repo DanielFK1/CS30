@@ -54,7 +54,15 @@ public class TugofWar
         	{
         		greenLED.setState(false);
         	}
-        		
+        	
+        	greenPlayer = greenButton.getState();
+        	redPlayer = redButton.getState();
+        	Thread.sleep(1000);
+        }
+        //Flash all the lights
+        while(true)
+        {
+        	
         }
     }
 }
