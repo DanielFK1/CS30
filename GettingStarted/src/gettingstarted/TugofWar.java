@@ -14,11 +14,11 @@ public class TugofWar
         
         redButton.setHubPort(5);
         redButton.setIsHubPortDevice(true);
-        redLED.setHubPort(2);
+        redLED.setHubPort(1);
         redLED.setIsHubPortDevice(true);
         greenButton.setHubPort(0);
         greenButton.setIsHubPortDevice(true);
-        greenLED.setHubPort(1);
+        greenLED.setHubPort(2);
         greenLED.setIsHubPortDevice(true);
 
         redButton.open(1000);
@@ -57,12 +57,30 @@ public class TugofWar
         	
         	greenPlayer = greenButton.getState();
         	redPlayer = redButton.getState();
-        	Thread.sleep(1000);
+        	Thread.sleep(100);
         }
+        
         //Flash all the lights
-        while(true)
+        if(redCount == 10)
         {
+        	for(int i=0 ;i<5 ;i++)
+        	{
+                redLED.setState(true);
+                Thread.sleep(100);
+                redLED.setState(false);
+                Thread.sleep(100);
+        	}
+        }
         	
+        if(greenCount == 10)
+        {
+           for(int i=0 ;i<5 ;i++)
+            {
+               greenLED.setState(true);
+               Thread.sleep(100);
+               greenLED.setState(false);
+               Thread.sleep(100);
+            }
         }
     }
 }
