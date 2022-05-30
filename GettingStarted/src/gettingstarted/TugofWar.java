@@ -57,12 +57,16 @@ public class TugofWar
         	
         	greenPlayer = greenButton.getState();
         	redPlayer = redButton.getState();
-        	Thread.sleep(100);
+        	Thread.sleep(10);
         }
         
         //Flash all the lights
         if(redCount == 10)
         {
+            greenLED.setState(true);
+            Thread.sleep(100);
+            greenLED.setState(false);
+            Thread.sleep(100);
         	for(int i=0 ;i<5 ;i++)
         	{
                 redLED.setState(true);
@@ -74,6 +78,11 @@ public class TugofWar
         	
         if(greenCount == 10)
         {
+           redLED.setState(true);
+           Thread.sleep(100);
+           redLED.setState(false);
+           Thread.sleep(100);
+           
            for(int i=0 ;i<5 ;i++)
             {
                greenLED.setState(true);
