@@ -25,21 +25,37 @@ public class TugofWar
         redLED.open(1000);
         greenButton.open(1000);
         greenLED.open(1000);
-        while(true)
+        
+        int redCount=0;
+        int greenCount = 0;
+        boolean greenPlayer = false;
+        boolean redPlayer = false;
+        
+        while(redCount < 10 && greenCount < 10)
         {
-        	for(int i = 0; i < 10; i++)
+        	if (redButton.getState() && !redPlayer)
         	{
-        		if (redButton.getState() == true)
-        		{
-        			System.out.println("Red Button has been pressed: " + redButton.getState());
-        			Thread.sleep(1000);
-        		}
-        		if (greenButton.getState() == true)
-        		{
-        			System.out.println("Green Button State: " + greenButton.getState());
-        			Thread.sleep(1000);
-        		}
+        		redLED.setState(true);
+        		redCount++;
+        		
         	}
+        	else if (!redButton.getState())
+        	{
+        		redLED.setState(false);
+        	}
+        	
+        	if (greenButton.getState() && !greenPlayer)
+        	{
+        		greenLED.setState(true);
+        		greenCount++;
+        		
+        	}
+        	else if (!greenButton.getState())
+        	{
+        		greenLED.setState(false);
+        	}
+        		
         }
     }
 }
+
