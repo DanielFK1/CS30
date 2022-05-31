@@ -41,7 +41,7 @@ public class ButtonsandLED {
 	            	redcount += 1;
 	            	System.out.println("Red Button has been pressed " + redcount);
 	                redLED.setState(false);
-	                Thread.sleep(1000);
+	                Thread.sleep(300);
 	            } 
 	            else if(!redButton.getState())
 	            {
@@ -54,7 +54,7 @@ public class ButtonsandLED {
 	            	greencount += 1;
 	            	System.out.println("Green Button has been pressed " + greencount);
 	                greenLED.setState(false);
-	                Thread.sleep(1000);
+	                Thread.sleep(400);
 	            } 
 	            else if(!greenButton.getState()) 
 	            {
