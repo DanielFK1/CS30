@@ -33,13 +33,12 @@ public class Thermostat {
 	    {
 	        if (redButton.getState())
 	        {
-	        	Temp = Temp - 1; 
-	        		
+	        	Temp--; 	
 	        }
 	        	
 	        if (greenButton.getState())
 	        {
-	        	Temp = Temp + 1; 
+	        	Temp++; 
 	        }
 	        
 	        if(Temp < 19 || Temp > 23)
