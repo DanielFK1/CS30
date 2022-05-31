@@ -37,6 +37,7 @@ public class TugofWar
         	{
         		redLED.setState(true);
         		redCount++;
+        		System.out.println("Red player has pressed " + redCount + " times");
         		
         	}
         	else if (!redButton.getState())
@@ -48,6 +49,7 @@ public class TugofWar
         	{
         		greenLED.setState(true);
         		greenCount++;
+        		System.out.println("Green player has pressed " + greenCount + " times");
         		
         	}
         	else if (!greenButton.getState())
