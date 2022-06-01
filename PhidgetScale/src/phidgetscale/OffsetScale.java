@@ -11,7 +11,7 @@ public class OffsetScale
 	        
 	        
 	        //Open
-	        //scale.open(1000);
+	        scale.open(1000);
 	        
 	        //Use your Phidgets
 	        while(true)
