@@ -1,4 +1,5 @@
 package phidgetscale;
+
 import com.phidget22.*;
 
 public class ScaleOffset 
@@ -7,6 +8,7 @@ public class ScaleOffset
 	    {
 	        //Create
 	        VoltageRatioInput scale = new VoltageRatioInput();
+	        scale.setHubPort(0);
 	        
 	        //Open
 	        scale.open(1000);
