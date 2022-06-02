@@ -21,16 +21,24 @@ public class BlinkLED {
         greenLED.open(1000);
 
         //Use your Phidgets | Here is where you can have some fun and use your Phidgets! You can turn your LED on/off by setting the state to true/false. The sleep command keeps your LED on by letting 1000 milliseconds pass before turning the LED off.
-        while(true){
+        while(true)
+        {
+        
+        for(int i =0; i<3;i++)
+        	{
             redLED.setState(true);
             Thread.sleep(2000);
             redLED.setState(false);
             Thread.sleep(1000);
+        	}
             
+        for(int i =0; i<3;i++)
+        	{
             greenLED.setState(true);
             Thread.sleep(2000);
             greenLED.setState(false);
             Thread.sleep(1000);
+        	}
             
         }
     }
