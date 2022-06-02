@@ -14,16 +14,17 @@ public class CalculateWeight
 	        scale.open(1000);
 	        
 	        //Use your Offset Value
-	        double offsetValue = INSERT VALUE HERE
+	        double offsetValue = scale.getVoltageRatio();
+	        System.out.println("Calculating Offset");
 	        
 	        //Use your Phidgets
 	        while(true)
 	        {
 	            //Calculate Weight (kg)
-	            double weight = 4700 * (scale.getVoltageRatio() - offsetValue);
+	            double weight = 4700 * (scale.getVoltageRatio() - offsetValue) *2.205;
 	            
 	            //Display Weight
-	            System.out.println(String.format("%.3f kg", weight));      
+	            System.out.println(String.format("%.3f lbs", weight));      
 	            
 	            Thread.sleep(250);
 	        }
