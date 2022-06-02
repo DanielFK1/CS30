@@ -14,8 +14,8 @@ public class CalculateWeight
 	        scale.open(1000);
 	        
 	        //Use your Offset Value
-	        double offsetValue = 8.994373497084888E-4;
 	        System.out.println("Calculating Offset");
+	        double offsetValue = scale.getVoltageRatio();
 	        
 	        //Use your Phidgets
 	        while(true)
