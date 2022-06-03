@@ -14,9 +14,15 @@ public class CalculateWeight
 	        scale.open(1000);
 	        
 	        //Use your Offset Value
-	        System.out.println("Calculating Offset");
-	        double offsetValue = scale.getVoltageRatio();
+	        double offsetValue = 0;
 	        
+	        System.out.println("Calculating Offset");
+	        for(int i =0 ;i <= 64 ;i++)
+	        	{
+	        		offsetValue = scale.getVoltageRatio();
+	        		//offsetValue = offsetValue/i;
+	        		System.out.println(offsetValue);
+	        	}
 	        //Use your Phidgets
 	        while(true)
 	        {
