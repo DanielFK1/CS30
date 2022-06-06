@@ -28,11 +28,14 @@ public class RedButton {
 	        		System.out.println("Red Button State: " + redButton.getState());
 	        		Thread.sleep(1000);
 	        	}
+
+	        	
 	        	if (greenButton.getState() == true)
 	        	{
 	        		System.out.println("Green Button State: " + greenButton.getState());
 	        		Thread.sleep(1000);
 	        	}
+	        	
 	       }
 	  }
 }
