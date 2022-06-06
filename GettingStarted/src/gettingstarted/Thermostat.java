@@ -46,7 +46,7 @@ public class Thermostat {
 	        	redLED.setState(true);
 	        	greenLED.setState(false);
 	        }
-	        else if(Temp > 19 && Temp < 23)
+	        else if(Temp >= 19 && Temp <= 23)
 	        {
 	        	greenLED.setState(true);
 	        	redLED.setState(false);
